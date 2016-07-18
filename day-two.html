@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<style type="text/css" media="screen">
+			.car-top{
+				position: absolute;
+			    left: 35px;
+			    border-radius: 50%;
+			    background: #ed6e46;
+			    width: 90px;
+			    height: 80px;
+			}
+
+			div{
+				display: block;
+				background-color: #8fd5d5;
+			}
+
+			.window-left {
+			    position: absolute;
+			    left: 10px;
+			    top: 10px;
+			    background: white;
+			    border-radius: 100px 0 0 0;
+			    width: 30px;
+			    height: 30px;
+			}
+
+			.window-right{
+				position: absolute;
+			    left: 50px;
+			    top: 10px;
+			    background: white;
+			    border-radius: 0 100px 0 0;
+			    width: 30px;
+			    height: 30px;
+			}
+
+			.car-bottom{
+				position: absolute;
+			    top: 40px;
+			    color: white;
+			    background: #ed6e46;
+			    border-radius: 100px 100px 10px 10px;
+			    width: 160px;
+			    height: 50px;
+			    left: -34px;
+			}
+
+			.tire-left{
+				position: absolute;
+			    top: 60px;
+			    left: 12px;
+			    border-radius: 50%;
+			    background: #333333;
+			    width: 50px;
+			    height: 50px;
+			}
+			.tire-right{
+				position: absolute;
+			    top: 60px;
+			    left: 98px;
+			    border-radius: 50%;
+			    background: #333333;
+			    width: 50px;
+			    height: 50px;
+			}
+
+			.tire-rim{
+				position: absolute;
+			    top: 13px;
+			    left: 12px;
+			    border-radius: 50%;
+			    background: #666;
+			    width: 25px;
+			    height: 25px;
+			}
+
+			.car-contain{
+				position: absolute;
+				top: 90px;
+			    width: 160px;
+			    height: 110px;
+			    animation: drive 10s steps(100, end) infinite;
+			    -webkit-animation: drive 10s steps(100, end) infinite;
+			    background: transparent;
+			}
+
+			@keyframes drive {
+			  to {
+			    transform: translateX(640px);
+			  }
+			}
+
+			body{
+				background-color: #8fd5d5;
+			}
+
+			.mountain{
+				position: absolute;
+				top: 200px;
+				height: 800px;
+				width: 800px;
+				background-color: #4d2600;
+			}
+
+			.grass{
+				position: absolute;
+				top: 200px;
+				height: 50px;
+				width: 800px;
+				background-color: green;
+				z-index: 20;	
+			}
+
+			.post{
+				position: absolute;
+				top: 120px;
+				left: 793px;
+				height: 80px;
+				width: 15px;
+				background-color: #666;
+			}
+
+			.sign {
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: relative;
+				left: 742px;
+				top: 12px;
+				text-decoration-color: white;
+			}
+
+			.sign:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				border-bottom: 29px solid red;
+				border-left: 29px solid #8fd5d5;
+				border-right: 29px solid #8fd5d5;
+				width: 42px;
+				height: 0;
+			}
+
+			.sign:after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				border-top: 29px solid red;
+				border-left: 29px solid #8fd5d5;
+				border-right: 29px solid #8fd5d5;
+				width: 42px;
+				height: 0;
+			}	
+
+			.sun{
+				width: 100px;
+				height: 100px;
+				background: yellow;
+				border-radius: 50%;
+				top: 0px;
+				right: 0px;
+				position: absolute;
+			}	
+
+			.sign-text{
+				position: absolute;
+				color: white;
+				top: 30px;
+				left: 754px;
+				background-color: transparent;
+			}
+
+		</style>
+</head>
+<body>
+	<div class="car-contain">
+		<div class="car-top">
+			<div class="window-left"></div>
+			<div class="window-right"></div>
+			<div class="car-bottom"></div>
+		</div>
+		<div class="tire-left">
+			<div class="tire-rim"></div>
+		</div>
+		<div class="tire-right">
+			<div class="tire-rim"></div>
+		</div>
+	</div>
+	<div class="sign"></div>
+	<div class="sign-text"><H1>STOP!</H1></div>
+	<div class="post"></div>
+	<div class="sun"></div>
+	<div class="grass"></div>
+	<div class="mountain">
+	</div>
+
+</body>
+</html>
