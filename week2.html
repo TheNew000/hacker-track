@@ -1,0 +1,54 @@
+<script>
+
+// Question 1:
+
+function iterArr(arr){
+    var sum = arr.reduce(function(a, b){
+        return a + b;
+    });
+    return sum;
+}
+
+// OR
+
+function iterArr(arr){
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+
+// Question 2:
+
+function findMax(arr){
+    var max = Math.max.apply(Math, arr);
+    return max;
+}
+
+// OR
+
+
+function findMax(arr){
+    var max = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if(arr[i] > max){
+            max = arr[i];
+        }else if (arr[0] < 0)
+            max = arr[0];
+    }
+  return max;
+}
+
+// Question 3:
+
+function findAvg(arr){
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    var avg = sum / arr.length;
+    return avg;
+}
+</script>

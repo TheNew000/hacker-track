@@ -1,0 +1,20 @@
+function spaceAge(age){
+    var solarSystem = {
+    Earth: 365.25,
+    Mercury: 87.9692572,
+    Venus: 224.700799,
+    Mars: 686.967971,
+    Jupiter: 4332.82013,
+    Saturn: 10755.6986,
+    Uranus: 30687.153,
+    Neptune: 60190.0296
+    };
+
+    for(var planet in solarSystem){
+        var seconds = solarSystem[planet] * 86400;
+        var yourAge = Math.round((age / seconds) * 100)/100;
+        console.log("Your age on planet " + planet + ": " + yourAge + " years!");
+    }
+}
+
+spaceAge(1000000000);

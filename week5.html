@@ -1,0 +1,56 @@
+Hacker Track - Week 5
+
+<script>
+//a) Given an array x (e.g. [1,5, 10, -2]), create an algorithm (sets of instructions) that replaces any negative number with the value of 0.When the program is done x should have no negative values (e.g. [1, 5, 10, 0]).
+
+function noNeg(arr) {
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] < 0){
+      arr[i] = 0;
+    }
+  }
+    return arr; 
+}
+
+
+//b) Given an array x (e.g. [1,5, 10, -2]), create an algorithm (sets of instructions) that returns an array with the max, min, and average values ([max, min, avg]. ex [0,2,4] should return [4,0,2]).
+
+function maxMinAvg(arr) {
+    var max = 0;
+    var sum = 0; 
+    arr.sort(function(a, b){
+      return a-b;
+    });
+    var min = arr[0];
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+        sum += arr[i];
+    }
+    return [max, min, sum/arr.length];
+}
+
+//c) Write a function that takes an array as an argument and return an array with the first and last values swapped. The array will have a minimum length of 2 (ex. [1,5,10,-2] should return [-2,5,10,1]).
+
+function swap(arr) {
+  var first = arr[0];
+  var last = arr[arr.length-1];
+  var hold = arr[0];
+  arr[0] = last;
+  arr[arr.length-1] = hold;
+  return arr; 
+}
+
+//d) Write a function that takes an array of numbers and replaces any number that's negative to a string called 'DigitalCrafts'. For example if array = [-1,-3,2] should return ['DigitalCrafts', 'DigitalCrafts', 2].
+
+function numToStr(arr) {
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] < 0){
+      arr[i] = 'DigitalCrafts';
+    }
+  }
+  return arr; 
+}
+
+</script>
